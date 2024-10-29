@@ -1,6 +1,6 @@
 # Training with SceneInstruct
 
-Please follow the instructions below to train models with SceneInstruct as the backbone of SceneGenAgent.
+We currently support LoRA fine-tuning. Please follow the instructions below to fine-tuning models with SceneInstruct as the backbone of SceneGenAgent.
 
 ## Data Preparation
 Download the data from [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/19c1e04370174f95bf08/). The data covers three tasks in SceneGenAgent: assign placement, check positional error, and fix positional error.
