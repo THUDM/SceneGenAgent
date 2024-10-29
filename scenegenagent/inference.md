@@ -25,14 +25,14 @@ Note that serving Llama-3.1-70B with LoRA adapters takes approximately 160GB of 
 
 ### API-based Models
 
-For OpenAI models, we have immplemented `GPT4O` in [model.py](model.py#L84) which supports other models as well should you change its `model_name`. if you use our `GPT4O` implementation, you should create a file `openai_key` and add your API key.
+For OpenAI models, we have implemented `GPT4O` in [model.py](model.py#L84) which supports other models as well should you change its `model_name`. if you use our `GPT4O` implementation, you should create a file `openai_key` and add your API key.
 
-For models imcompatible with OpenAI API, you should create a child class of `Model` in [model.py](model.py#L15) and implement its [generate](model.py#L49) and [invoke](model.py#L64) methods. `generate` accepts a single string as the `prompt` argument and `invoke` accepts multiple rounds of conversation as the `messages` argument.
+For models incompatible with OpenAI API, you should create a child class of `Model` in [model.py](model.py#L15) and implement its [generate](model.py#L49) and [invoke](model.py#L64) methods. `generate` accepts a single string as the `prompt` argument and `invoke` accepts multiple rounds of conversation as the `messages` argument.
 
 ## Run SceneGenAgent Gradio Demo
 
 1. Deploy the models following [Model Deployment](#model-deployment).
-2. Set the models you want use in each part of SceneGenAgent in [demo.py](demo.py#L8). We have implemented `LocalModel` for you in [model.py](model.py#L80), and you may change `model_name` and `base_url` of `LocalModel`, set the models as `GPT4O` to serve API models, or use any self-implemented model objects. Set a model to `None` causes this part of SceneGenAgent to use the default model.
+2. Set the models you want to use in each part of SceneGenAgent in [demo.py](demo.py#L8). We have implemented `LocalModel` for you in [model.py](model.py#L80), and you may change `model_name` and `base_url` of `LocalModel`, set the models as `GPT4O` to serve API models, or use any self-implemented model objects. Setting a model to `None` causes this part of SceneGenAgent to use the default model.
 3. Run the demo with the following command:
    ```shell
    python demo.py
@@ -47,9 +47,9 @@ For models imcompatible with OpenAI API, you should create a child class of `Mod
    tar -xzvf test_data.csv.tar.gz
    cd ..
    ```
-3. Set the models you want use in each part of SceneGenAgent in [eval.py](eval.py#L11). We have implemented `LocalModel` for you in [model.py](model.py#L80), and you may change `model_name` and `base_url` of `LocalModel`, set the models as `GPT4O` to serve API models, or use any self-implemented model objects. Set a model to `None` causes this part of SceneGenAgent to use the default model.
+3. Set the models you want to use in each part of SceneGenAgent in [eval.py](eval.py#L11). We have implemented `LocalModel` for you in [model.py](model.py#L80), and you may change `model_name` and `base_url` of `LocalModel`, set the models as `GPT4O` to serve API models, or use any self-implemented model objects. Setting a model to `None` causes this part of SceneGenAgent to use the default model.
 4. Run evaluation with the following command:
    ```shell
    bash eval.sh
    ```
-   The generated code is stored in `output/generation.jsonl` by default. Run the code for each description in [Process Simulate](https://plm.sw.siemens.com/en-US/tecnomatix/products/process-simulate-software/) to render the scene.
+   The generated code is stored in `output/generation.jsonl` by default. To render the scene, run the code for each description in [Process Simulate](https://plm.sw.siemens.com/en-US/tecnomatix/products/process-simulate-software/).
