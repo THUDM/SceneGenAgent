@@ -1,0 +1,7 @@
+To load a Cabinet:
+```csharp
+if (directoryInfo.Name.Contains("Cabinet"))
+{
+    cabinetModels.Add(directoryInfo);
+}
+```

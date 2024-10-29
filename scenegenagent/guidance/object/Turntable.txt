@@ -1,0 +1,7 @@
+To load a Turntable:
+```csharp
+if (directoryInfo.Name.Contains("Table") && directoryInfo.Name.Contains("Turntable"))
+{
+    turntableModels.Add(directoryInfo);
+}
+```

@@ -1,0 +1,7 @@
+To load a Guarding:
+```csharp
+if (directoryInfo.Name.Contains("Guarding"))
+{
+    guardingModels.Add(directoryInfo);
+}
+```

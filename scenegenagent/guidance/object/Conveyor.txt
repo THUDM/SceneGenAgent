@@ -1,0 +1,7 @@
+To load a Conveyor:
+```csharp
+if (directoryInfo.Name.Contains("Conveyor"))
+{
+    conveyorModels.Add(directoryInfo);
+}
+```

@@ -1,0 +1,11 @@
+To load an ABB Robot IRB6600:
+```csharp
+if (directoryInfo.Name.Contains("Robot") && directoryInfo.Name.Contains("ABB"))
+{
+    FileInfo[] robotFiles = directoryInfo.GetFiles("*irb6600*", SearchOption.TopDirectoryOnly);
+    if (robotFiles.Length != 0)
+    {
+        robotModelsIRB6600.Add(directoryInfo);
+    }
+}
+```

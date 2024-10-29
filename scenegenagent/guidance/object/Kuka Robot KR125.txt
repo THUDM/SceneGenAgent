@@ -1,0 +1,11 @@
+To load a Kuka Robot KR125:
+```csharp
+if (directoryInfo.Name.Contains("Robot") && directoryInfo.Name.Contains("KUKA"))
+{
+    FileInfo[] robotFiles = directoryInfo.GetFiles("*kr125*", SearchOption.TopDirectoryOnly);
+    if (robotFiles.Length != 0)
+    {
+        robotModelsKR125.Add(directoryInfo);
+    }
+}
+```

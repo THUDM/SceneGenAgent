@@ -1,0 +1,7 @@
+To load a ValveStand:
+```csharp
+if (directoryInfo.Name.Contains("ValveStand"))
+{
+    standModels.Add(directoryInfo);
+}
+```

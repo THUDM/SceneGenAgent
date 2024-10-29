@@ -1,0 +1,11 @@
+To load a YASKAWA Robot ma01800:
+```csharp
+if (directoryInfo.Name.Contains("Robot") && directoryInfo.Name.Contains("YASKAWA"))
+{
+    FileInfo[] robotFiles = directoryInfo.GetFiles("*ma01800*", SearchOption.TopDirectoryOnly);
+    if (robotFiles.Length != 0)
+    {
+        robotModelsma01800.Add(directoryInfo);
+    }
+}
+```

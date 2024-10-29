@@ -1,0 +1,7 @@
+To load a Welding Table:
+```csharp
+if (directoryInfo.Name.Contains("Table") && directoryInfo.Name.Contains("Welding"))
+{
+    weldingtableModels.Add(directoryInfo);
+}
+```
