@@ -20,6 +20,7 @@ This repository is the code for deploying SceneGenAgent as a Gradio application 
   - [Install Dependency](#install-dependency)
   - [Running SceneGenAgent Demo](#running-scenegenagent-demo)
   - [Training with SceneInstruct](#training-with-sceneinstruct)
+  - [Build SceneInstruct Dataset](#build-sceneinstruct-dataset)
   - [Evaluation](#evaluation)
   - [Citation](#citation)
 
@@ -38,6 +39,10 @@ To run the SceneGenAgent demo with API-basd or offline models, please refer to t
 ## Training with SceneInstruct
 
 To train models with SceneInstruct as the backbone of SceneGenAgent, please follow the instructions in [train.md](training/train.md).
+
+## Build SceneInstruct Dataset
+
+To reproduce the procedure of building the SceneInstruct dataset, please follow [dataset.md](sceneinstruct/dataset.md).
 
 ## Evaluation
 
